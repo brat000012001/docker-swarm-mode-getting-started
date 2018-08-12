@@ -9,7 +9,7 @@ if [ -z ${stack} ]; then
 fi
 
 sessionname="monitor-$stack"
-setdockerhost="export DOCKER_HOST=192.168.99.201; "
+setdockerhost="export DOCKER_HOST=192.168.99.201"
 watch="$setdockerhost; watch -d -n 0.5 "
 stackps="$watch docker stack ps $stack"
 dockerps="$watch docker ps -f name=$stack --format \'table {{.ID}}\\\\t{{.Names}}\\\\t{{.RunningFor}}\\\\t{{.Status}}\'"
