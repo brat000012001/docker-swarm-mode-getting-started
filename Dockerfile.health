@@ -1,0 +1,4 @@
+FROM swarmgs/cowsay
+
+HEALTHCHECK --interval=5s CMD /usr/games/fortune || exit 1
+
